@@ -9,5 +9,6 @@
         <li><span>Series: </span><p>{{$comic['series']}}</p></li>
         <li><span>Sale date: </span><p>{{$comic['sale_date']}}</p></li>
         <li><span>Type: </span><p>{{$comic['type']}}</p></li>
+        <li><a href="{{route('comics.index')}}">Back to homepage</a></li>
     </ul>
 @endsection

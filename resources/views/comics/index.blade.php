@@ -15,6 +15,16 @@
                     <li><span>Sale date: </span><p>{{$comic['sale_date']}}</p></li>
                     <li><span>Type: </span><p>{{$comic['type']}}</p></li>
                     <li><a href="{{route('comics.show', $comic['id'])}}">Show</a></li>
+                    <li><a href="{{route('comics.edit', $comic->id)}}">Edit</a></li>
+                    <form action="{{route('comics.destroy', $comic->id)}}" method="POST">
+                        {{-- token --}}
+                        @csrf
+                        {{-- method --}}
+                        @method('DELETE')
+
+                        <button type="submit">Delete</button>
+
+                    </form>
                     
                 </ul>
             </li>
